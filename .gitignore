@@ -1,17 +1,69 @@
+# =========================
 # Python
+# =========================
+
 venv/
 __pycache__/
+*.pyc
 .env
 
+# =========================
 # Node
+# =========================
+
 node_modules/
 
-# Build files
+# =========================
+# Build Files
+# =========================
+
 dist/
 build/
 
+# =========================
 # VS Code
+# =========================
+
 .vscode/
 
+# =========================
+# Uploads
+# =========================
+
+uploads/
+backend/uploads/
+
+# =========================
+# Dataset
+# =========================
+
+dataset/
+backend/dataset/
+
+processed_resume_dataset.csv
+backend/processed_resume_dataset.csv
+
+# =========================
 # ML Models
+# =========================
+
+models/
+backend/models/
+
+*.safetensors
+*.pkl
 *.pt
+*.pth
+
+# =========================
+# Logs
+# =========================
+
+*.log
+
+# =========================
+# OS Files
+# =========================
+
+.DS_Store
+Thumbs.db
