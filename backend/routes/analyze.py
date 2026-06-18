@@ -7,7 +7,7 @@ import os
 
 from services.pdf_service import extract_text_from_pdf
 from services.gemini_service import analyze_resume_with_gemini
-#from ml.bert_classifier import classify_resume
+from ml.bert_classifier import classify_resume
 
 router = APIRouter(
     prefix="/analyze",
@@ -45,9 +45,9 @@ async def analyze_resume(
         file_path
     )
 
-    #predicted_category = classify_resume(
-        #resume_text
-    #)
+    predicted_category = classify_resume(
+        resume_text
+    )
 
     gemini_analysis = analyze_resume_with_gemini(
         resume_text
