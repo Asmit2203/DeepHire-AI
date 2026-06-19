@@ -8,19 +8,17 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://deep-hire-ai-seven.vercel.app"
+        "https://deep-hire-ai-seven.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Routers
 app.include_router(analyze_router)
 
 @app.get("/")
